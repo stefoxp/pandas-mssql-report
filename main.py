@@ -1,15 +1,14 @@
 from config import secrets
 from lib.odbc_conn import Connect
 from lib.pandas_db import DbWithPandas
+from lib.configuration import Configuration
 
 def main():
-    print("main function")
-    cls_cn = Connect(secrets.ersurb['driver'],
-                    secrets.ersurb['server'],
-                    secrets.ersurb['database'],
-                    secrets.ersurb['username'],
-                    secrets.ersurb['password']
-    )
+    # print("main function")
+
+    conf = Configuration()
+
+    cls_cn = Connect(conf.get_odbc('ersurb'))
     cn = cls_cn.connection()
 
     # s_str = 'SELECT TOP 10 * FROM COMU_MATRICOLE WHERE Annullato = 0;'
