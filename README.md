@@ -10,9 +10,12 @@ Procedura di attivazione:
 - sudo apt-get install unixodbc-dev
 - sudo -H pip3 install pyodbc -> [Documentazione](https://github.com/mkleehammer/pyodbc/wiki)
 - [Driver ODBC per SQL server](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15)
+- pip install Flask
+- pip install pytest
 - pip freeze > requirements.txt
 - $ odbcinst -j
 - pip install -r requirements.txt
+- python -m flask run
 
 > N.B. è necessario installare apt-get install unixodbc-dev -> non basta su Ubuntu 20 (il 12/02/2022): non riesco a installare pip install pyodbc
 Devo provare ad installare il wheel come indicato su [https://github.com/mkleehammer/pyodbc/wiki/Install](https://github.com/mkleehammer/pyodbc/wiki/Install)
